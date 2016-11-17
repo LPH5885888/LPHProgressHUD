@@ -37,7 +37,7 @@
         self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
         self.requestManager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.requestManager.requestSerializer.timeoutInterval = 10;
-        self.requestManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", nil];
+        self.requestManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/html", nil];
         
         [self setDefaultLoading];
     }
@@ -46,44 +46,75 @@
 }
 
 - (NSURLSessionTask *)jsonRequest:(NSString *)URLString
+                       HTTPMethod:(NSString *)HTTPMethod
                        parameters:(NSDictionary *)postData
                     loadingString:(NSString *)loadingStr
-                          success:(void (^)(NSURLSessionDataTask *, id))success
-                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+                          success:(void (^)(NSURLSessionDataTask *operation, id responseObject))success
+                          failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure {
     
     // 如果url地址有特殊符号 就可以调用序列化
     URLString = [URLString  stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSString *fullURLStr = [[NSURL URLWithString:URLString relativeToURL:self.requestManager.baseURL] absoluteString];
-    NSLog(@"URLString:%@", fullURLStr);
-
+    NSLog(@"RequestURLStr:%@", fullURLStr);
+    
     NSString *loadingID = fullURLStr;
     self.showLoadingBlock(loadingID, loadingStr);
     
-    NSURLSessionDataTask *dataTask = [self.requestManager POST:URLString parameters:postData progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionDataTask *dataTask = [[NSURLSessionDataTask alloc] init];
+    if ([HTTPMethod isEqualToString:@"GET"]) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        dataTask = [self.requestManager GET:URLString parameters:postData progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            if (self.remoLoadingBlock != nil) {
+                
+                self.remoLoadingBlock(loadingID);
+            }
+            if (success != nil) {
+                
+                success(task, responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            if (self.remoLoadingBlock != nil) {
+                
+                self.remoLoadingBlock(loadingID);
+            }
+            
+            if (failure != nil) {
+                
+                failure(task, error);
+            }
+        }];
+    } else {
         
-        if (self.remoLoadingBlock != nil) {
+        dataTask = [self.requestManager POST:URLString parameters:postData progress:^(NSProgress * _Nonnull uploadProgress) {
             
-            self.remoLoadingBlock(loadingID);
-        }
-        if (success != nil) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            success(task, responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if (self.remoLoadingBlock != nil) {
+            if (self.remoLoadingBlock != nil) {
+                
+                self.remoLoadingBlock(loadingID);
+            }
+            if (success != nil) {
+                
+                success(task, responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            self.remoLoadingBlock(loadingID);
-        }
-        
-        if (failure != nil) {
+            if (self.remoLoadingBlock != nil) {
+                
+                self.remoLoadingBlock(loadingID);
+            }
             
-            failure(task, error);
-        }
-    }];
+            if (failure != nil) {
+                
+                failure(task, error);
+            }
+        }];
+    }
     
     return dataTask;
 }

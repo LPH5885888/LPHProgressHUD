@@ -20,17 +20,20 @@ extern NSString *baseUrl;
 + (instancetype)sharedManager;
 
 /*! 发起网络请求
- \param  URLString 请求地址不带 IP 的地址
- \param  postData 请求体
+ \param  URLString  请求地址不带IP的地址
+ \param  HTTPMethod 请求方式 GET/POST
+ \param  postData   请求体
  \param  loadingStr 需要提示的HUD
- \param  success 成功回调
- \param  failure 失败回调
+ \param  success    成功回调
+ \param  failure    失败回调
  \return 请求
  */
 - (NSURLSessionTask *)jsonRequest:(NSString *)URLString
+                       HTTPMethod:(NSString *)HTTPMethod
                        parameters:(NSDictionary *)postData
                     loadingString:(NSString *)loadingStr
                           success:(void (^)(NSURLSessionDataTask *operation, id responseObject))success
                           failure:(void (^)(NSURLSessionDataTask *operation, NSError *error))failure;
+
 
 @end
