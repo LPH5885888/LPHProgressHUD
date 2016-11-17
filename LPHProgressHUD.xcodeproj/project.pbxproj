@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		045370761DDC40C10009354B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045370751DDC40C10009354B /* main.m */; };
+		045370791DDC40C10009354B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045370781DDC40C10009354B /* AppDelegate.m */; };
+		0453707C1DDC40C10009354B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453707B1DDC40C10009354B /* ViewController.m */; };
+		0453707F1DDC40C10009354B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0453707D1DDC40C10009354B /* Main.storyboard */; };
+		045370811DDC40C20009354B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045370801DDC40C20009354B /* Assets.xcassets */; };
+		045370841DDC40C20009354B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045370821DDC40C20009354B /* LaunchScreen.storyboard */; };
+		0453708F1DDC40F50009354B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453708E1DDC40F50009354B /* MBProgressHUD.m */; };
+		045370921DDC41210009354B /* MBProgressHUD+LPHProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 045370911DDC41210009354B /* MBProgressHUD+LPHProgress.m */; };
+		045370951DDC41BE0009354B /* LPHRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 045370941DDC41BE0009354B /* LPHRequestTool.m */; };
+		246F75629330451C8192B321 /* libPods-LPHProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98692D6A7E60BFD4D51EF8FA /* libPods-LPHProgressHUD.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		045370711DDC40C10009354B /* LPHProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPHProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		045370751DDC40C10009354B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		045370771DDC40C10009354B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		045370781DDC40C10009354B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0453707A1DDC40C10009354B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0453707B1DDC40C10009354B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0453707E1DDC40C10009354B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		045370801DDC40C20009354B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		045370831DDC40C20009354B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		045370851DDC40C20009354B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0453708D1DDC40F50009354B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0453708E1DDC40F50009354B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		045370901DDC41200009354B /* MBProgressHUD+LPHProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+LPHProgress.h"; sourceTree = "<group>"; };
+		045370911DDC41210009354B /* MBProgressHUD+LPHProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+LPHProgress.m"; sourceTree = "<group>"; };
+		045370931DDC41BE0009354B /* LPHRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHRequestTool.h; sourceTree = "<group>"; };
+		045370941DDC41BE0009354B /* LPHRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHRequestTool.m; sourceTree = "<group>"; };
+		1EA3E7E27E5E9DFD4CFF07DA /* Pods-LPHProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPHProgressHUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPHProgressHUD/Pods-LPHProgressHUD.debug.xcconfig"; sourceTree = "<group>"; };
+		46789C9302A7CAA3B9AFFCE0 /* Pods-LPHProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPHProgressHUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPHProgressHUD/Pods-LPHProgressHUD.release.xcconfig"; sourceTree = "<group>"; };
+		98692D6A7E60BFD4D51EF8FA /* libPods-LPHProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LPHProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0453706E1DDC40C10009354B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246F75629330451C8192B321 /* libPods-LPHProgressHUD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		045370681DDC40C10009354B = {
+			isa = PBXGroup;
+			children = (
+				045370731DDC40C10009354B /* LPHProgressHUD */,
+				045370721DDC40C10009354B /* Products */,
+				1978A2CCF24FB0F4604385ED /* Pods */,
+				94818C988D52649731351797 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		045370721DDC40C10009354B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				045370711DDC40C10009354B /* LPHProgressHUD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		045370731DDC40C10009354B /* LPHProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0453708C1DDC40F50009354B /* Tool */,
+				045370771DDC40C10009354B /* AppDelegate.h */,
+				045370781DDC40C10009354B /* AppDelegate.m */,
+				0453707A1DDC40C10009354B /* ViewController.h */,
+				0453707B1DDC40C10009354B /* ViewController.m */,
+				0453707D1DDC40C10009354B /* Main.storyboard */,
+				045370801DDC40C20009354B /* Assets.xcassets */,
+				045370821DDC40C20009354B /* LaunchScreen.storyboard */,
+				045370851DDC40C20009354B /* Info.plist */,
+				045370741DDC40C10009354B /* Supporting Files */,
+			);
+			path = LPHProgressHUD;
+			sourceTree = "<group>";
+		};
+		045370741DDC40C10009354B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				045370751DDC40C10009354B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0453708C1DDC40F50009354B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				0453708D1DDC40F50009354B /* MBProgressHUD.h */,
+				0453708E1DDC40F50009354B /* MBProgressHUD.m */,
+				045370901DDC41200009354B /* MBProgressHUD+LPHProgress.h */,
+				045370911DDC41210009354B /* MBProgressHUD+LPHProgress.m */,
+				045370931DDC41BE0009354B /* LPHRequestTool.h */,
+				045370941DDC41BE0009354B /* LPHRequestTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		1978A2CCF24FB0F4604385ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA3E7E27E5E9DFD4CFF07DA /* Pods-LPHProgressHUD.debug.xcconfig */,
+				46789C9302A7CAA3B9AFFCE0 /* Pods-LPHProgressHUD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94818C988D52649731351797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98692D6A7E60BFD4D51EF8FA /* libPods-LPHProgressHUD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		045370701DDC40C10009354B /* LPHProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 045370881DDC40C20009354B /* Build configuration list for PBXNativeTarget "LPHProgressHUD" */;
+			buildPhases = (
+				1EFAF511C33C85BCB7619204 /* Check Pods Manifest.lock */,
+				0453706D1DDC40C10009354B /* Sources */,
+				0453706E1DDC40C10009354B /* Frameworks */,
+				0453706F1DDC40C10009354B /* Resources */,
+				F0FC0F099E65FB501540975A /* Embed Pods Frameworks */,
+				45844CBE1F33196D289FF3DE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LPHProgressHUD;
+			productName = LPHProgressHUD;
+			productReference = 045370711DDC40C10009354B /* LPHProgressHUD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		045370691DDC40C10009354B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Lph;
+				TargetAttributes = {
+					045370701DDC40C10009354B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0453706C1DDC40C10009354B /* Build configuration list for PBXProject "LPHProgressHUD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 045370681DDC40C10009354B;
+			productRefGroup = 045370721DDC40C10009354B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				045370701DDC40C10009354B /* LPHProgressHUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0453706F1DDC40C10009354B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045370841DDC40C20009354B /* LaunchScreen.storyboard in Resources */,
+				045370811DDC40C20009354B /* Assets.xcassets in Resources */,
+				0453707F1DDC40C10009354B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EFAF511C33C85BCB7619204 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45844CBE1F33196D289FF3DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPHProgressHUD/Pods-LPHProgressHUD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0FC0F099E65FB501540975A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPHProgressHUD/Pods-LPHProgressHUD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0453706D1DDC40C10009354B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0453707C1DDC40C10009354B /* ViewController.m in Sources */,
+				045370791DDC40C10009354B /* AppDelegate.m in Sources */,
+				045370951DDC41BE0009354B /* LPHRequestTool.m in Sources */,
+				045370761DDC40C10009354B /* main.m in Sources */,
+				045370921DDC41210009354B /* MBProgressHUD+LPHProgress.m in Sources */,
+				0453708F1DDC40F50009354B /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0453707D1DDC40C10009354B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0453707E1DDC40C10009354B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		045370821DDC40C20009354B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				045370831DDC40C20009354B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		045370861DDC40C20009354B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		045370871DDC40C20009354B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		045370891DDC40C20009354B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA3E7E27E5E9DFD4CFF07DA /* Pods-LPHProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LPHProgressHUD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lph.LPHProgressHUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0453708A1DDC40C20009354B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46789C9302A7CAA3B9AFFCE0 /* Pods-LPHProgressHUD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LPHProgressHUD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Lph.LPHProgressHUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0453706C1DDC40C10009354B /* Build configuration list for PBXProject "LPHProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045370861DDC40C20009354B /* Debug */,
+				045370871DDC40C20009354B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		045370881DDC40C20009354B /* Build configuration list for PBXNativeTarget "LPHProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045370891DDC40C20009354B /* Debug */,
+				0453708A1DDC40C20009354B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 045370691DDC40C10009354B /* Project object */;
+}
