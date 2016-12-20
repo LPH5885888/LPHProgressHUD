@@ -34,7 +34,8 @@
     self = [super init];
     if (self) {
         
-        self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
+//        self.requestManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
+        self.requestManager = [[AFHTTPSessionManager alloc] init];
         self.requestManager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.requestManager.requestSerializer.timeoutInterval = 10;
         self.requestManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/html", nil];

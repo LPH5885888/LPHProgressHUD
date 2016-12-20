@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 
-extern NSString *baseUrl;
 @interface LPHRequestTool : NSObject
 
 // 显示HUD
